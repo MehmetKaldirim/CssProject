@@ -1,0 +1,33 @@
+.box {
+    background: wheat;
+    color: black;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    mso-border-shadow: yes;
+    margin: 0px;
+    box-sizing: border-box;
+    height: 300px;
+    width: 48%;
+    display: inline-block;
+}
+
+html,
+body {
+    height: 100%;
+}
+/*#first-box{
+
+    box-sizing: border-box;
+    height: 300px;
+    width: 50%;
+}*/
+
+#first-box{
+    /*visibility: hidden;*/
+    display: none;
+}
+
+div:last-of-type:hover{
+    border-color: chartreuse;
+}
