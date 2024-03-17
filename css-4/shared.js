@@ -4,6 +4,20 @@ var modalNoButton = document.querySelector(".modal__action--negative");
 var selectPlanButtons = document.querySelectorAll(".plan button");
 var toggleButton = document.querySelector(".toggle-button");
 var mobileNav = document.querySelector(".mobile-nav");
+var ctaButton = document.querySelector(".main-nav__item--cta")
+
+ctaButton.addEventListener('animationstart',function(event){
+    console.log('anamasyon started', event)
+})
+
+ctaButton.addEventListener('animationend',function(event){
+    console.log('anamasyon end', event)
+})
+ctaButton.addEventListener('animationiteration',function(event){
+    console.log('anamasyon itiriyor', event)
+})
+
+
 
 // console.dir(backdrop.style['background-image']);
 
@@ -14,6 +28,7 @@ for (var i = 0; i < selectPlanButtons.length; i++) {
          //backdrop.style.display = "block";
         // modal.className = 'open'; // This will actually overwrite the complete class list
         modal.classList.add("open");
+        backdrop.style.display = 'block';
         backdrop.classList.add("open");
     });
 }
@@ -33,13 +48,13 @@ if (modalNoButton) {
 }
 
 function closeModal() {
-       backdrop.style.display = "none";
-    if (modal) {
-        modal.style.display = "none";
+     //backdrop.style.display = "none";
+     // modal.style.display = "none";
+    if(modal){
+        modal.classList.remove("open");
     }
-
-    //modal.classList.remove("open");
-    //backdrop.classList.remove("open");
+    backdrop.style.display='none';
+    backdrop.classList.remove("open");
 }
 
 toggleButton.addEventListener("click", function() {
