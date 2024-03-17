@@ -7,14 +7,11 @@ var mobileNav = document.querySelector(".mobile-nav");
 var ctaButton = document.querySelector(".main-nav__item--cta")
 
 ctaButton.addEventListener('animationstart',function(event){
-    console.log('anamasyon started', event)
 })
 
 ctaButton.addEventListener('animationend',function(event){
-    console.log('anamasyon end', event)
 })
 ctaButton.addEventListener('animationiteration',function(event){
-    console.log('anamasyon itiriyor', event)
 })
 
 
